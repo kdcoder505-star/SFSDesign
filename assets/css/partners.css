@@ -1,0 +1,82 @@
+.recruitment-section {
+    background-color: #0d1b2a;
+    /* Navy Blue */
+    color: white;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Updated Marquee Logic */
+.partner-marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.partner-logo-track {
+    display: flex;
+    gap: 4rem;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+    padding: 20px 0;
+}
+
+/* Pause animation on hover */
+.partner-marquee-wrapper:hover .partner-logo-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Moves exactly half way, assuming duplicated content */
+    }
+}
+
+.partner-item {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%) brightness(0) invert(1) opacity(0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-item:hover {
+    filter: grayscale(0) brightness(1) invert(0) opacity(1);
+    transform: scale(1.15);
+}
+
+.partner-item i,
+.partner-item span {
+    display: block;
+}
+
+.partner-item span {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Responsive speed adjustment */
+@media (max-width: 768px) {
+    .partner-logo-track {
+        animation-duration: 20s;
+        gap: 3rem;
+    }
+
+    .partner-item {
+        width: 100px;
+    }
+}

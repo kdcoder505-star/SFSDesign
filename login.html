@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SFS College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            /* Light grey background like reference */
+        }
+
+        .login-wrap-container {
+            min-height: 85vh;
+            /* Ensure full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-split-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            min-height: 600px;
+            /* Generous height like reference */
+        }
+
+        /* Left Side: Form */
+        .login-left {
+            flex: 1;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Right Side: Visual */
+        .login-right {
+            flex: 1;
+            background-color: #f8faff;
+            /* Very light blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .login-subtitle {
+            color: #6c757d;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+
+        .role-selector {
+            margin-bottom: 2rem;
+        }
+
+        .form-label-custom {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            display: block;
+            color: var(--primary-color);
+        }
+
+        .role-option {
+            display: block;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            background: white;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .role-option:hover {
+            border-color: #cbd3da;
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .role-option.active {
+            border-color: var(--brand-red);
+            background-color: #fff5f5;
+            color: var(--brand-red);
+            box-shadow: 0 4px 15px rgba(227, 30, 36, 0.15);
+        }
+
+        .role-option i {
+            margin-right: 15px;
+            color: #adb5bd;
+            font-size: 1.4rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .role-option.active i {
+            color: var(--brand-red);
+        }
+
+        .btn-login-main {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-login-main:hover {
+            background-color: var(--brand-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 30, 36, 0.2);
+        }
+
+        .welcome-back-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .illustration-img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 2rem;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .login-split-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .login-right {
+                display: none;
+                /* Hide illustration on mobile for cleaner look as per modern standards */
+            }
+
+            .login-left {
+                padding: 2.5rem;
+            }
+
+            .login-split-card {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm bg-white" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center p-0" href="index.html">
+                <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo"
+                    style="height: 45px; max-width: 250px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center fw-bold text-uppercase small tracking-wide">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item dropdown dropdown-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg mt-0 rounded-0"
+                            style="border-top: 3px solid var(--brand-red);">
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Business & Management</a>
+                            </li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Commerce</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Humanities & Social
+                                    Sciences</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Sciences</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#admissions">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clubs.html">Student Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+                    <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="enquiry.html" class="btn btn-apply-outline px-4 py-2 rounded-1 text-uppercase"
+                                style="font-size: 0.8rem;">Apply Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html"
+                                class="btn btn-login-red px-4 py-2 rounded-1 text-uppercase border-0 shadow-sm"
+                                style="font-size: 0.8rem; letter-spacing: 0.5px;">Login</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="login-wrap-container mt-5">
+        <div class="login-split-card reveal">
+            <!-- Left Side: Visual -->
+            <div class="login-right text-center"
+                style="background-color: #f0f4ff; border-right: 1px solid rgba(0,0,0,0.05);">
+                <p class="small text-uppercase fw-bold text-muted mb-2">Nice to see you again</p>
+                <h2 class="welcome-back-text mb-4">Welcome back</h2>
+
+                <!-- Custom Themed SVG Placeholder Illustration -->
+                <div class="d-flex justify-content-center">
+                    <svg width="280" height="280" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="90" fill="#f8f9fa" />
+                        <!-- Abstract graduation / education elements -->
+                        <path d="M40,90 L100,60 L160,90 L100,120 Z" fill="#0d1b2a" /> <!-- Cap base (Navy) -->
+                        <path d="M160,90 L160,110" stroke="#0d1b2a" stroke-width="2" /> <!-- Tassel Holder -->
+                        <circle cx="160" cy="115" r="5" fill="#E31E24" /> <!-- Tassel End (Red) -->
+                        <rect x="60" y="110" width="80" height="60" rx="5" fill="#ffffff" stroke="#0d1b2a"
+                            stroke-width="2" /> <!-- Book/Laptop -->
+                        <rect x="70" y="120" width="60" height="40" fill="#E31E24" opacity="0.1" /> <!-- Screen -->
+                        <path d="M100,130 L110,140 L125,125" stroke="#E31E24" stroke-width="4" fill="none" />
+                        <!-- Tick mark -->
+                        <circle cx="30" cy="50" r="10" fill="#dbaa00" opacity="0.6" /> <!-- Deco dot (Yellow) -->
+                        <circle cx="170" cy="160" r="15" fill="#E31E24" opacity="0.6" /> <!-- Deco dot (Red) -->
+                        <circle cx="150" cy="40" r="8" fill="#0d1b2a" opacity="0.2" /> <!-- Deco dot (Navy) -->
+                    </svg>
+                </div>
+                <p class="text-muted mt-4 small w-75 mx-auto">Powered by Linways Technologies Pvt.Ltd. | AUTONOMOUS
+                    ULTIMATE.</p>
+            </div>
+
+            <!-- Right Side: Login Form -->
+            <div class="login-left">
+                <div class="text-start">
+
+                    <h1 class="login-title">Log in.</h1>
+                    <p class="login-subtitle">Select your role to access your dashboard.</p>
+                </div>
+
+                <div class="role-selector" id="roleSelector">
+                    <label class="form-label-custom">Select Role</label>
+                    <div class="role-option active"
+                        onclick="selectRole('student', 'https://sfs-ecity.linways.com/student/')" id="opt-student">
+                        <i class="fas fa-user-graduate"></i> Student
+                    </div>
+                    <div class="role-option" onclick="selectRole('faculty', 'https://sfs-ecity.linways.com/staff/')"
+                        id="opt-faculty">
+                        <i class="fas fa-chalkboard-teacher"></i> Faculty
+                    </div>
+                    <div class="role-option" onclick="selectRole('parent', 'https://sfs-ecity.linways.com/parent/')"
+                        id="opt-parent">
+                        <i class="fas fa-users"></i> Parent
+                    </div>
+                </div>
+
+                <a href="https://sfs-ecity.linways.com/student/" target="_blank" id="loginBtn"
+                    class="btn btn-login-main">
+                    Log In
+                </a>
+
+                <div class="text-center mt-3">
+                    <p class="small text-muted">Don't have an account? <a href="enquiry.html"
+                            class="fw-bold text-decoration-none" style="color: var(--brand-red);">Enquire Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="bg-white text-dark pt-5 pb-3 border-top" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-light p-2 rounded-1 border">
+                            <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo" style="height: 50px;">
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-4">A premier institution committed to academic excellence and
+                        holistic development since 2004. Accredited with 'A' Grade by NAAC.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Quick Links</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="sciences.html" class="footer-link">Admissions</a></li>
+                        <li><a href="index.html#programs" class="footer-link">Academics</a></li>
+                        <li><a href="#" class="footer-link">Faculty</a></li>
+                    </ul>
+                </div>
+                <!-- Resources -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Resources</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="footer-link">Student Portal</a></li>
+                        <li><a href="#" class="footer-link">Library</a></li>
+                        <li><a href="#" class="footer-link">Placements</a></li>
+                        <li><a href="#" class="footer-link">Campus Map</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Contact Info</span>
+                    <ul class="list-unstyled d-flex flex-column gap-3 small text-muted">
+                        <li class="d-flex gap-2"><i class="fas fa-map-marker-alt mt-1 text-brand-red"></i> Electronic
+                            City, Bengaluru, Karnataka - 560100</li>
+                        <li class="d-flex gap-2"><i class="fas fa-phone-alt mt-1 text-brand-red"></i> +91 80 2783 2165
+                        </li>
+                        <li class="d-flex gap-2"><i class="fas fa-envelope mt-1 text-brand-red"></i>
+                            admission@sfscollege.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-top mt-5 pt-4 d-flex justify-content-between align-items-center small text-muted flex-wrap gap-2">
+                <div>&copy; 2026 St. Francis de Sales College. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-button">
+            <i class="fas fa-comments fa-2x"></i>
+        </div>
+        <div id="chatbot-container">
+            <div class="chat-header">
+                <h6>SFS Assist</h6>
+                <div class="chat-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="chat-body" id="chat-body"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-message" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+
+    <script>
+        function selectRole(role, url) {
+            // Remove active class from all
+            document.querySelectorAll('.role-option').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Add active class to clicked
+            document.getElementById('opt-' + role).classList.add('active');
+
+            // Update button link
+            document.getElementById('loginBtn').href = url;
+        }
+    </script>
+</body>
+
+</html>

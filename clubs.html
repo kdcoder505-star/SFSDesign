@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Support & Clubs | SFS College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <style>
+        .club-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition-smooth);
+            background: #fff;
+            height: 100%;
+        }
+
+        .club-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .club-img-wrap {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .club-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .club-card:hover .club-img-wrap img {
+            transform: scale(1.1);
+        }
+
+        .club-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(13, 27, 42, 0.2), rgba(13, 27, 42, 0.9));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm bg-white" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center p-0" href="index.html">
+                <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo"
+                    style="height: 45px; max-width: 250px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center fw-bold text-uppercase small tracking-wide">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+
+                    <li class="nav-item dropdown dropdown-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg mt-0 rounded-0"
+                            style="border-top: 3px solid var(--brand-red);">
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Business & Management</a>
+                            </li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Commerce</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Humanities & Social
+                                    Sciences</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Sciences</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="index.html#admissions">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="clubs.html">Student Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+                    <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="enquiry.html" class="btn btn-apply-outline px-4 py-2 rounded-1 text-uppercase"
+                                style="font-size: 0.8rem;">Apply Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html"
+                                class="btn btn-login-red px-4 py-2 rounded-1 text-uppercase border-0 shadow-sm"
+                                style="font-size: 0.8rem; letter-spacing: 0.5px;">Login</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero d-flex align-items-center justify-content-center text-center"
+        style="background-image: url('https://www.sfscollege.in/slide/about.JPG');">
+        <div class="container py-5 reveal page-hero-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <span class="section-subtitle mb-2"
+                        style="color: var(--brand-yellow); text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Campus Life</span>
+                    <h1 class="page-hero-title mb-4">Student Support & Clubs</h1>
+                    <p class="lead text-white opacity-90 fw-medium">Join a vibrant community of learners and leaders.
+                        Explore our diverse range of clubs and forums designed to nurture your talents.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Clubs Grid Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal">
+                <span class="section-subtitle">Get Involved</span>
+                <h2 class="display-5 fw-bold text-dark-blue">Student Associations & Clubs</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Enhance your college experience by joining one
+                    of our many active student organizations.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center reveal delay-100">
+                <!-- Data derived from user image -->
+                <!-- Data derived from user image -->
+                <div class="col-md-4 col-sm-6 reveal">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="https://www.sfscollege.in/slide/1.JPG" alt="DISHA">
+                            <div class="club-overlay">
+                                <h5>DISHA</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reveal delay-100">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="https://www.sfscollege.in/slide/2.JPG" alt="Rotaract Club">
+                            <div class="club-overlay">
+                                <h5>Rotaract Club</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reveal delay-200">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="assets/images/DSC02282.JPG" alt="CSA">
+                            <div class="club-overlay">
+                                <h5>CSA</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 reveal">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="https://www.sfscollege.in/slide/4.JPG" alt="DFFA">
+                            <div class="club-overlay">
+                                <h5>DFFA</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reveal delay-100">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="https://www.sfscollege.in/slide/5.JPEG" alt="DNC">
+                            <div class="club-overlay">
+                                <h5>DNC</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reveal delay-200">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="assets/images/DSC02294.JPG" alt="Health Club">
+                            <div class="club-overlay">
+                                <h5>Health Club</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 reveal">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="assets/images/hero-bg.jpg" alt="NEDA">
+                            <div class="club-overlay">
+                                <h5>NEDA</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reveal delay-100">
+                    <div class="club-card">
+                        <div class="club-img-wrap">
+                            <img src="assets/images/DSC02306.JPG" alt="International Student Forum">
+                            <div class="club-overlay">
+                                <h5>International Student Forum</h5>
+                                <a href="#"
+                                    class="btn btn-sm btn-light rounded-pill px-3 fw-bold small text-primary mt-2">Join
+                                    Club</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-white text-dark pt-5 pb-3 border-top" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-light p-2 rounded-1 border">
+                            <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo" style="height: 50px;">
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-4">A premier institution committed to academic excellence and
+                        holistic development since 2004. Accredited with 'A' Grade by NAAC.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/sfs.college/" class="social-icon bg-light text-dark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Quick Links</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="sciences.html" class="footer-link">Admissions</a></li>
+                        <li><a href="index.html#programs" class="footer-link">Academics</a></li>
+                        <li><a href="#" class="footer-link">Faculty</a></li>
+                    </ul>
+                </div>
+                <!-- Resources -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Resources</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="footer-link">Student Portal</a></li>
+                        <li><a href="#" class="footer-link">Library</a></li>
+                        <li><a href="#" class="footer-link">Placements</a></li>
+                        <li><a href="#" class="footer-link">Campus Map</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Contact Info</span>
+                    <ul class="list-unstyled d-flex flex-column gap-3 small text-muted">
+                        <li class="d-flex gap-2"><i class="fas fa-map-marker-alt mt-1 text-brand-red"></i> Electronic
+                            City, Bengaluru, Karnataka - 560100</li>
+                        <li class="d-flex gap-2"><i class="fas fa-phone-alt mt-1 text-brand-red"></i> +91 80 2783 2165
+                        </li>
+                        <li class="d-flex gap-2"><i class="fas fa-envelope mt-1 text-brand-red"></i>
+                            admission@sfscollege.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-top mt-5 pt-4 d-flex justify-content-between align-items-center small text-muted flex-wrap gap-2">
+                <div>&copy; 2026 St. Francis de Sales College. All rights reserved.</div>
+                <div class="d-flex gap-3">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-button">
+            <i class="fas fa-comments fa-2x"></i>
+        </div>
+        <div id="chatbot-container">
+            <div class="chat-header">
+                <h6>SFS Assist</h6>
+                <div class="chat-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-message" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+</body>
+
+</html>

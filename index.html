@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Francis de Sales College, Bengaluru</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/partners.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm bg-white" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center p-0" href="index.html">
+                <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo"
+                    style="height: 45px; max-width: 250px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center fw-bold text-uppercase small tracking-wide">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+
+                    <li class="nav-item dropdown dropdown-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg mt-0 rounded-0"
+                            style="border-top: 3px solid var(--brand-red);">
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Business & Management</a>
+                            </li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Commerce</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Humanities & Social
+                                    Sciences</a></li>
+                            <li><a class="dropdown-item py-2" href="sciences.html">School of Sciences</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clubs.html">Student Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                    <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="enquiry.html" class="btn btn-apply-outline px-4 py-2 rounded-1 text-uppercase"
+                                style="font-size: 0.8rem;">Apply Now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html"
+                                class="btn btn-login-red px-4 py-2 rounded-1 text-uppercase border-0 shadow-sm"
+                                style="font-size: 0.8rem; letter-spacing: 0.5px;">Login</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section (Full Screen) -->
+    <header class="hero-section position-relative">
+        <!-- Carousel Background -->
+        <div id="heroCarousel" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100"
+            data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100" data-bs-interval="4000">
+                    <img src="https://www.sfscollege.in/slide/1.JPG" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Campus 1">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100" data-bs-interval="4000">
+                    <img src="https://www.sfscollege.in/slide/2.JPG" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Campus 2">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100" data-bs-interval="4000">
+                    <img src="https://www.sfscollege.in/slide/3.jpg" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Campus 3">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100" data-bs-interval="4000">
+                    <img src="https://www.sfscollege.in/slide/4.JPG" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Campus 4">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100" data-bs-interval="4000">
+                    <img src="https://www.sfscollege.in/slide/5.JPEG" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Campus 5">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="container hero-content text-center px-4 position-relative z-2 d-flex flex-column justify-content-center align-items-center h-100"
+            style="min-height: 100vh;">
+            <div class="reveal">
+                <div
+                    class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white-glass mb-4 border border-white-50 shadow-sm">
+                    <i class="fas fa-certificate text-warning"></i>
+                    <span class="text-white small fw-bold text-uppercase">Autonomous • NAAC A++ Accredited</span>
+                </div>
+                <h1 class="display-3 fw-bolder mb-3 text-white lh-sm">
+                    Excellence, Efficiency<br>
+                    <span class="text-warning">Transformation</span>
+                </h1>
+                <p class="lead text-white mb-5 mx-auto fw-medium"
+                    style="max-width: 800px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); font-size: 1.25rem;">
+                    Shaping global leaders through holistic education and academic excellence since 2004.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="enquiry.html"
+                        class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold border-0 shadow-lg btn-hero-red">
+                        Apply Online
+                    </a>
+                    <a href="sciences.html"
+                        class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm">
+                        Explore Campus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. About Section -->
+    <section id="about" class="py-4 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <span class="section-subtitle">About SFS College</span>
+                    <h2 class="display-5 fw-bold mb-4 text-dark-blue">Empowering Minds,<br>Transforming Lives</h2>
+                    <p class="text-muted mb-4 lead" style="font-size: 1.1rem;">
+                        A premier Autonomous Institution run by the Missionaries of St. Francis de Sales (MSFS),
+                        dedicated to academic excellence.
+                    </p>
+                    <div class="d-flex flex-column gap-3 mt-4">
+                        <div
+                            class="d-flex align-items-center gap-3 p-3 rounded-3 border border-light shadow-sm card-hover-red">
+                            <div class="icon-circle bg-danger-subtle text-danger"><i class="fas fa-award"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Industry-Aligned Curriculum</h6>
+                                <small class="text-muted">Designed with top corporate inputs</small>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center gap-3 p-3 rounded-3 border border-light shadow-sm card-hover-red">
+                            <div class="icon-circle bg-warning-subtle text-warning"><i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Holistic Development</h6>
+                                <small class="text-muted">Focus on sports, arts, and values</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <div class="position-relative">
+                        <img src="https://www.sfscollege.in/slide/about.JPG" alt="Campus"
+                            class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 500px;">
+                        <div
+                            class="position-absolute bottom-0 start-0 m-4 p-4 bg-white rounded-4 shadow-lg d-none d-md-block border-start-5 border-warning">
+                            <h2 class="display-5 fw-bold text-dark-blue mb-0">20+</h2>
+                            <span class="text-muted fw-bold small text-uppercase">Years of Legacy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Stats Strip (Separate Cards) -->
+    <section class="stats-section p-0 mt-5 reveal">
+        <div class="container-fluid px-4">
+            <div class="stats-container">
+                <!-- Item 1: Programmes -->
+                <div class="stat-item">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1000" class="stat-bg-img"
+                        alt="Programmes">
+                    <div class="stat-overlay" style="background: rgba(13, 27, 42, 0.85);"></div>
+                    <div class="stat-content">
+                        <div class="stat-icon mb-2"><i class="fas fa-graduation-cap fa-2x text-warning"></i></div>
+                        <h5 class="fw-bold">Programmes Offered</h5>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <div class="counter text-white display-4 fw-bold" data-target="15">0</div><span
+                                class="display-6 fw-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Recruiters -->
+                <div class="stat-item">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000"
+                        class="stat-bg-img" alt="Recruiters">
+                    <div class="stat-overlay" style="background: rgba(227, 30, 36, 0.85);"></div>
+                    <div class="stat-content">
+                        <div class="stat-icon mb-2"><i class="fas fa-handshake fa-2x text-white"></i></div>
+                        <h5 class="fw-bold">Top Recruiters</h5>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <div class="counter text-white display-4 fw-bold" data-target="100">0</div><span
+                                class="display-6 fw-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Faculty -->
+                <div class="stat-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000"
+                        class="stat-bg-img" alt="Faculty">
+                    <div class="stat-overlay" style="background: rgba(13, 27, 42, 0.85);"></div>
+                    <div class="stat-content">
+                        <div class="stat-icon mb-2"><i class="fas fa-chalkboard-teacher fa-2x text-warning"></i></div>
+                        <h5 class="fw-bold">Certified Faculty</h5>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <div class="counter text-white display-4 fw-bold" data-target="150">0</div><span
+                                class="display-6 fw-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Students -->
+                <div class="stat-item">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000"
+                        class="stat-bg-img" alt="Students">
+                    <div class="stat-overlay" style="background: rgba(227, 30, 36, 0.85);"></div>
+                    <div class="stat-content">
+                        <div class="stat-icon mb-2"><i class="fas fa-users fa-2x text-white"></i></div>
+                        <h5 class="fw-bold">Happy Students</h5>
+                        <div class="d-flex align-items-center justify-content-center gap-1">
+                            <div class="counter text-white display-4 fw-bold" data-target="2500">0</div><span
+                                class="display-6 fw-bold">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Academics -->
+    <section id="programs" class="py-5 bg-light mt-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal">
+                <span class="section-subtitle">Academics</span>
+                <h2 class="display-4 fw-bold text-dark-blue">Shape Your Future</h2>
+                <div class="mx-auto mt-3"
+                    style="width: 60px; height: 4px; background: var(--brand-red); border-radius: 2px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="program-card">
+                        <div class="img-wrapper">
+                            <img src="https://www.sfscollege.in/slide/2.JPG" alt="Business">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm fw-bold">Management</span>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="fw-bold mb-2">School of Business and Management</h5>
+                            <p class="text-white-50 small mb-3">Leadership, Innovation & Entrepreneurship</p>
+                            <a href="sciences.html" class="btn btn-sm btn-outline-light rounded-pill px-3">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3 reveal delay-100">
+                    <div class="program-card">
+                        <div class="img-wrapper">
+                            <img src="https://www.sfscollege.in/slide/3.jpg" alt="Commerce">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm fw-bold">Finance</span>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="fw-bold mb-2">School of Commerce</h5>
+                            <p class="text-white-50 small mb-3">Accounting, Taxation & Global Finance</p>
+                            <a href="sciences.html" class="btn btn-sm btn-outline-light rounded-pill px-3">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3 reveal delay-200">
+                    <div class="program-card">
+                        <div class="img-wrapper">
+                            <img src="https://www.sfscollege.in/slide/5.JPEG" alt="Humanities">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm fw-bold">Humanities</span>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="fw-bold mb-2">School of Humanities & Social Sciences</h5>
+                            <p class="text-white-50 small mb-3">Psychology, Literature & Social Sciences</p>
+                            <a href="sciences.html" class="btn btn-sm btn-outline-light rounded-pill px-3">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-3 reveal delay-300">
+                    <div class="program-card">
+                        <div class="img-wrapper">
+                            <img src="https://www.sfscollege.in/slide/4.JPG" alt="Sciences">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm fw-bold">Science</span>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="fw-bold mb-2">School of Sciences</h5>
+                            <p class="text-white-50 small mb-3">Computer Science, AI & Mathematics</p>
+                            <a href="sciences.html" class="btn btn-sm btn-outline-light rounded-pill px-3">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Campus Life -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 reveal">
+                    <span class="section-subtitle">Campus Life</span>
+                    <h2 class="display-4 fw-bold text-dark-blue mb-4">Beyond the Classroom</h2>
+                    <p class="text-muted mb-4">Experience a vibrant campus life designed for holistic growth, cultural
+                        vibrancy, and athletic excellence.</p>
+                    <a href="sciences.html"
+                        class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold btn-view-gallery">View Gallery</a>
+                </div>
+                <div class="col-lg-7 reveal delay-200">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <div class="campus-card-sm overflow-hidden rounded-4">
+                                <img src="https://www.sfscollege.in/slide/about.JPG" class="w-100"
+                                    style="height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="campus-card-sm overflow-hidden rounded-4 mb-3">
+                                <img src="https://www.sfscollege.in/slide/6.JPG" class="w-100"
+                                    style="height: 165px; object-fit: cover;">
+                            </div>
+                            <div class="campus-card-sm overflow-hidden rounded-4">
+                                <img src="https://www.sfscollege.in/slide/4.JPG" class="w-100"
+                                    style="height: 170px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Events & News -->
+    <!-- 6. Latest News -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+                <div>
+                    <span class="section-subtitle">Updates</span>
+                    <h2 class="display-5 fw-bold text-dark-blue">Latest News</h2>
+                </div>
+                <a href="sciences.html" class="text-decoration-none fw-bold text-dark small btn-view-archive">View
+                    News Archive <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 reveal">
+                    <div class="news-card-clean bg-white rounded-4 shadow-sm h-100 overflow-hidden d-flex flex-column">
+                        <div class="news-img-wrap position-relative" style="height: 250px;">
+                            <img src="https://www.sfscollege.in/news/athenia.png" class="w-100 h-100 object-fit-cover"
+                                alt="SFS News">
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-3 rounded-pill small fw-bold">NEW</span>
+                        </div>
+                        <div class="p-4 flex-grow-1">
+                            <h5 class="fw-bold mb-2">ATHENIA 2K25-26</h5>
+                            <p class="text-muted small mb-3">Intracollegiate Sports Meet ensuring physical fitness and
+                                team spirit for all students.</p>
+                            <a href="sciences.html" class="text-danger fw-bold small text-decoration-none">Read Full
+                                Story <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal delay-100">
+                    <div class="news-card-clean bg-white rounded-4 shadow-sm h-100 overflow-hidden d-flex flex-column">
+                        <div class="news-img-wrap position-relative" style="height: 250px;">
+                            <img src="https://www.sfscollege.in/news/bos.png" class="w-100 h-100 object-fit-cover"
+                                alt="Workshop">
+                            <span
+                                class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-1 m-3 rounded-pill small fw-bold">ACADEMIC</span>
+                        </div>
+                        <div class="p-4 flex-grow-1">
+                            <h5 class="fw-bold mb-2">Faculty Development</h5>
+                            <p class="text-muted small mb-3">Workshop on Curriculum Design & BOS Preparation for
+                                academic excellence and innovation.</p>
+                            <a href="sciences.html" class="text-danger fw-bold small text-decoration-none">Read Full
+                                Story <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Upcoming Events -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+                <div>
+                    <span class="section-subtitle">Calendar</span>
+                    <h2 class="display-5 fw-bold text-dark-blue">Upcoming Events</h2>
+                </div>
+                <a href="sciences.html" class="text-decoration-none fw-bold text-dark small btn-view-archive">View
+                    Calendar <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="news-card-clean bg-white rounded-4 shadow-sm h-100 overflow-hidden">
+                        <div class="news-img-wrap position-relative" style="height: 240px;">
+                            <img src="https://www.sfscollege.in/slide/1.JPG" class="w-100 h-100 object-fit-cover"
+                                alt="Fest">
+                            <div class="position-absolute bottom-0 start-0 bg-white p-2 m-3 rounded text-center shadow-sm"
+                                style="min-width: 60px;">
+                                <span class="d-block fw-bold text-danger h4 mb-0">15</span>
+                                <span class="d-block small text-muted text-uppercase fw-bold">Mar</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-2">Razzmatazz 2k25</h5>
+                            <p class="text-muted small mb-3">The annual cultural extravaganza celebrating student
+                                talent, music, and art.</p>
+                            <a href="sciences.html"
+                                class="btn btn-sm btn-outline-danger rounded-pill px-3 fw-bold">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-100">
+                    <div class="news-card-clean bg-white rounded-4 shadow-sm h-100 overflow-hidden">
+                        <div class="news-img-wrap position-relative" style="height: 240px;">
+                            <img src="https://www.sfscollege.in/slide/2.JPG" class="w-100 h-100 object-fit-cover"
+                                alt="Seminar">
+                            <div class="position-absolute bottom-0 start-0 bg-white p-2 m-3 rounded text-center shadow-sm"
+                                style="min-width: 60px;">
+                                <span class="d-block fw-bold text-danger h4 mb-0">22</span>
+                                <span class="d-block small text-muted text-uppercase fw-bold">Mar</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-2">Science Exhibition</h5>
+                            <p class="text-muted small mb-3">Showcasing innovative projects and research by our science
+                                students.</p>
+                            <a href="sciences.html"
+                                class="btn btn-sm btn-outline-danger rounded-pill px-3 fw-bold">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-200">
+                    <div class="news-card-clean bg-white rounded-4 shadow-sm h-100 overflow-hidden">
+                        <div class="news-img-wrap position-relative" style="height: 240px;">
+                            <img src="assets/images/DSC02294.JPG" class="w-100 h-100 object-fit-cover" alt="Conference">
+                            <div class="position-absolute bottom-0 start-0 bg-white p-2 m-3 rounded text-center shadow-sm"
+                                style="min-width: 60px;">
+                                <span class="d-block fw-bold text-danger h4 mb-0">05</span>
+                                <span class="d-block small text-muted text-uppercase fw-bold">Apr</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-2">National Conference</h5>
+                            <p class="text-muted small mb-3">A gathering of minds to discuss trends in Technology and
+                                Management.</p>
+                            <a href="sciences.html"
+                                class="btn btn-sm btn-outline-danger rounded-pill px-3 fw-bold">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruitment Partners Section -->
+    <section class="recruitment-section text-center">
+        <div class="container-fluid reveal">
+            <h2 class="display-6 fw-bold mb-5 text-white" style="letter-spacing: 2px;">RECRUITMENT PARTNERS</h2>
+
+            <div class="partner-marquee-wrapper">
+                <div class="partner-logo-track">
+                    <!-- Original Set -->
+                    <div class="partner-item" title="Accenture">
+                        <div class="text-center"><i class="fab fa-adn fa-3x"></i>
+                            <div class="small mt-2">accenture</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Airtel">
+                        <div class="text-center"><i class="fas fa-signal fa-3x"></i>
+                            <div class="small mt-2">airtel</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Amazon">
+                        <div class="text-center"><i class="fab fa-amazon fa-3x"></i>
+                            <div class="small mt-2">amazon</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Apple">
+                        <div class="text-center"><i class="fab fa-apple fa-3x"></i>
+                            <div class="small mt-2">Apple</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Toyota">
+                        <div class="text-center"><i class="fas fa-car fa-3x"></i>
+                            <div class="small mt-2">TOYOTA</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="DMart">
+                        <div class="text-center"><i class="fas fa-shopping-basket fa-3x"></i>
+                            <div class="small mt-2">DMart</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="HGS">
+                        <div class="text-center"><i class="fas fa-headset fa-3x"></i>
+                            <div class="small mt-2">HGS</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="HP">
+                        <div class="text-center"><i class="fas fa-laptop fa-3x"></i>
+                            <div class="small mt-2">hp</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Hero">
+                        <div class="text-center"><i class="fas fa-motorcycle fa-3x"></i>
+                            <div class="small mt-2">Hero</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Infosys">
+                        <div class="text-center"><i class="fas fa-code fa-3x"></i>
+                            <div class="small mt-2">Infosys</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="L&T">
+                        <div class="text-center"><i class="fas fa-building fa-3x"></i>
+                            <div class="small mt-2">L&T</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Dell">
+                        <div class="text-center"><i class="fas fa-desktop fa-3x"></i>
+                            <div class="small mt-2">DELL</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Metro">
+                        <div class="text-center"><i class="fas fa-subway fa-3x"></i>
+                            <div class="small mt-2">METRO</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="WeOwn">
+                        <div class="text-center"><i class="fas fa-users fa-3x"></i>
+                            <div class="small mt-2">WEOWN</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Muthoot">
+                        <div class="text-center"><i class="fas fa-rupee-sign fa-3x"></i>
+                            <div class="small mt-2">Muthoot</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Capgemini">
+                        <div class="text-center"><i class="fas fa-gem fa-3x"></i>
+                            <div class="small mt-2">Capgemini</div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Set for Seamless Scroll -->
+                    <div class="partner-item" title="Accenture">
+                        <div class="text-center"><i class="fab fa-adn fa-3x"></i>
+                            <div class="small mt-2">accenture</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Airtel">
+                        <div class="text-center"><i class="fas fa-signal fa-3x"></i>
+                            <div class="small mt-2">airtel</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Amazon">
+                        <div class="text-center"><i class="fab fa-amazon fa-3x"></i>
+                            <div class="small mt-2">amazon</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Apple">
+                        <div class="text-center"><i class="fab fa-apple fa-3x"></i>
+                            <div class="small mt-2">Apple</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Toyota">
+                        <div class="text-center"><i class="fas fa-car fa-3x"></i>
+                            <div class="small mt-2">TOYOTA</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="DMart">
+                        <div class="text-center"><i class="fas fa-shopping-basket fa-3x"></i>
+                            <div class="small mt-2">DMart</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="HGS">
+                        <div class="text-center"><i class="fas fa-headset fa-3x"></i>
+                            <div class="small mt-2">HGS</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="HP">
+                        <div class="text-center"><i class="fas fa-laptop fa-3x"></i>
+                            <div class="small mt-2">hp</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Hero">
+                        <div class="text-center"><i class="fas fa-motorcycle fa-3x"></i>
+                            <div class="small mt-2">Hero</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Infosys">
+                        <div class="text-center"><i class="fas fa-code fa-3x"></i>
+                            <div class="small mt-2">Infosys</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="L&T">
+                        <div class="text-center"><i class="fas fa-building fa-3x"></i>
+                            <div class="small mt-2">L&T</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Dell">
+                        <div class="text-center"><i class="fas fa-desktop fa-3x"></i>
+                            <div class="small mt-2">DELL</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Metro">
+                        <div class="text-center"><i class="fas fa-subway fa-3x"></i>
+                            <div class="small mt-2">METRO</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="WeOwn">
+                        <div class="text-center"><i class="fas fa-users fa-3x"></i>
+                            <div class="small mt-2">WEOWN</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Muthoot">
+                        <div class="text-center"><i class="fas fa-rupee-sign fa-3x"></i>
+                            <div class="small mt-2">Muthoot</div>
+                        </div>
+                    </div>
+                    <div class="partner-item" title="Capgemini">
+                        <div class="text-center"><i class="fas fa-gem fa-3x"></i>
+                            <div class="small mt-2">Capgemini</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <a href="#" class="btn btn-outline-light rounded-pill px-5 py-2 fw-bold">KNOW MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA (Admissions) -->
+    <section id="admissions" class="text-white text-center">
+        <div class="container reveal">
+            <h2 class="display-4 fw-bold mb-4">Ready to Shape Your Future?</h2>
+            <p class="lead mb-5 mx-auto opacity-90 fw-medium" style="max-width: 800px;">
+                Join a community of ambitious learners and dedicated educators. <br class="d-none d-md-block">
+                Your journey to academic excellence and personal growth begins here with SFS College.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="enquiry.html" class="btn btn-danger btn-lg px-5 py-3 rounded-pill fw-bold border-0 shadow-lg"
+                    style="background-color: var(--brand-red);">Apply Now 2025</a>
+                <a href="enquiry.html" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-bold">Download
+                    Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="bg-white text-dark pt-5 pb-3 border-top" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-light p-2 rounded-1 border">
+                            <img src="https://www.sfscollege.in/images/logo.png" alt="SFS Logo" style="height: 50px;">
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-4">A premier institution committed to academic excellence and
+                        holistic development since 2004. Accredited with 'A' Grade by NAAC.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/sfs.college/" class="social-icon bg-light text-dark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon bg-light text-dark"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Quick Links</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="sciences.html" class="footer-link">Admissions</a></li>
+                        <li><a href="index.html#programs" class="footer-link">Academics</a></li>
+                        <li><a href="#" class="footer-link">Faculty</a></li>
+                    </ul>
+                </div>
+                <!-- Resources -->
+                <div class="col-md-2">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Resources</span>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="footer-link">Student Portal</a></li>
+                        <li><a href="#" class="footer-link">Library</a></li>
+                        <li><a href="#" class="footer-link">Placements</a></li>
+                        <li><a href="#" class="footer-link">Campus Map</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <span class="text-brand-red fw-bold small d-block mb-3 text-uppercase">Contact Info</span>
+                    <ul class="list-unstyled d-flex flex-column gap-3 small text-muted">
+                        <li class="d-flex gap-2"><i class="fas fa-map-marker-alt mt-1 text-brand-red"></i> Electronic
+                            City, Bengaluru, Karnataka - 560100</li>
+                        <li class="d-flex gap-2"><i class="fas fa-phone-alt mt-1 text-brand-red"></i> +91 80 2783 2165
+                        </li>
+                        <li class="d-flex gap-2"><i class="fas fa-envelope mt-1 text-brand-red"></i>
+                            admission@sfscollege.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-top mt-5 pt-4 d-flex justify-content-between align-items-center small text-muted flex-wrap gap-2">
+                <div>&copy; 2026 St. Francis de Sales College. All rights reserved.</div>
+                <div class="d-flex gap-3">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-button">
+            <i class="fas fa-comments fa-2x"></i>
+        </div>
+        <div id="chatbot-container">
+            <div class="chat-header">
+                <h6>SFS Assist</h6>
+                <div class="chat-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-message" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+</body>
+
+</html>
